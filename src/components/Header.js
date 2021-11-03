@@ -1,7 +1,28 @@
 import React from "react";
 import { BrowserRouter as Router,  Link } from "react-router-dom";
 
+import { useWeb3React } from "@web3-react/core"
+import { injected } from "./connectors"
+
 const Header = () => {
+    const { active, account, library, connector, activate, deactivate } = useWeb3React()
+  
+    async function connect() {
+      try {
+        await activate(injected)
+      } catch (ex) {
+        console.log(ex)
+      }
+    }
+  
+    async function disconnect() {
+      try {
+        deactivate();
+      } catch (ex) {
+        console.log(ex)
+      }
+    }
+
     return(
         <Router>
             <header>
@@ -35,9 +56,7 @@ const Header = () => {
                             </Link> 
                         </div>
 
-                        <Link to="/">
-                            <h4 className="connectWallet">Connect Wallet</h4>
-                        </Link>
+                        {active ? <Link to="/" onClick={disconnect}><h4 className="connectWallet">Disconnect</h4></Link> : <Link to="/" onClick={connect}><h4 className="connectWallet">Connect</h4></Link>}
 
                     </div>
                     </nav>

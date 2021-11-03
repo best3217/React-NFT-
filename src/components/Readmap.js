@@ -179,9 +179,8 @@ export const Readmap = () => {
                 fillColor="#FEA715"
                 handleObserve={(setObserver) => (
                     <Timeline
-                    // callback={onCallback}
-                    className="timeline"
-                    setObserver={setObserver}
+                        className="timeline"
+                        setObserver={setObserver}
                     />
                 )}
             />
