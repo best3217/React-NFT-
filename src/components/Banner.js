@@ -4,10 +4,10 @@ import Light from "./Light";
 
 const Banner = () => {
     return(
-        <div className="banner">
+        <div className="banner" style={{ backgroundImage: `url(./homebanner.png)` }}>
             <div className="container position-relative">
                 <h3 className="text-white text-lg-end sub-title">Welcome to the</h3>
-                <h1 className="title">Finibus-Bonorum</h1>
+                <h1 className="title">Post-Apocalyptic</h1>
 
                 <div className="row">
                     <div className="col-lg-6 offset-lg-3 offset-xxl-6">
@@ -34,12 +34,12 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-                <div className="banner-thumbnail">
+                {/* <div className="banner-thumbnail">
                     <img src="./banner.png" />
-                </div>
+                </div> */}
             </div>
 
-            <Light
+            {/* <Light
                 url="./lights/light1.png"
                 left="auto"
                 right={-15}
@@ -64,7 +64,7 @@ const Banner = () => {
                 top="auto"
                 bottom={-885}
                 index={-1}
-            />
+            /> */}
         </div>
     );
 }

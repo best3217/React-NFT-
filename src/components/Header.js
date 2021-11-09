@@ -6,8 +6,10 @@ import { injected } from "./connectors"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 const Header = () => {
-    const { active, account, library, connector, activate, deactivate } = useWeb3React()
-  
+    const { active, activate, deactivate } = useWeb3React();
+
+    console.log(active)
+
     async function connect() {
       try {
         await activate(injected)
