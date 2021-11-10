@@ -90,8 +90,8 @@ function App() {
                   <button>Join our Discord</button>
                 </div>
               </div>
-              <div className="col-lg-7">
-                <img src="./community.png" />
+              <div className="col-lg-6 offset-lg-1">
+                <img src="./community1.png" />
               </div>
             </div>
           </div>

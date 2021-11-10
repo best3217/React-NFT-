@@ -251,12 +251,12 @@ button {
 
 //community//
 .community {
-    padding-top: 4rem;
+    padding: 7rem 0;
 
     img {
         @include media-breakpoint-down(lg) {
             max-width: 100%;
-            padding-top: 3rem;
+            padding: 3rem 0;
         }
     }
 }
