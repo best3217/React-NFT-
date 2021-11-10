@@ -1,0 +1,17 @@
+[debug] [2021-11-10T20:45:44.982Z] ----------------------------------------------------------------------
+[debug] [2021-11-10T20:45:44.985Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\PGC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-11-10T20:45:44.985Z] CLI Version:   9.21.0
+[debug] [2021-11-10T20:45:44.985Z] Platform:      win32
+[debug] [2021-11-10T20:45:44.985Z] Node Version:  v12.18.2
+[debug] [2021-11-10T20:45:44.986Z] Time:          Wed Nov 10 2021 23:45:44 GMT+0300 (Moscow Standard Time)
+[debug] [2021-11-10T20:45:44.987Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-10T20:45:45.098Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-10T20:45:45.098Z] > authorizing via signed-in user (volodmart.dev@gmail.com)
+[debug] [2021-11-10T20:45:45.098Z] [iam] checking project react-63e90 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-11-10T20:45:45.101Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-10T20:45:45.102Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-10T20:45:45.677Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Wed, 10 Nov 2021 20:51:00 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-10T20:45:45.742Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/react-63e90:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}

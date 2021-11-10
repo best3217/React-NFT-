@@ -3,7 +3,7 @@ import Light from "./Light";
 
 const Teams = () => {
     return (
-        <div className="teams">
+        <div id="team" className="teams">
             <div className="container">
                 <h2 className="text-white mb-5">Meet the team</h2>
                 <div className="row">

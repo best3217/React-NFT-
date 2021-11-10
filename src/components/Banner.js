@@ -34,37 +34,7 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div className="banner-thumbnail">
-                    <img src="./banner.png" />
-                </div> */}
             </div>
-
-            {/* <Light
-                url="./lights/light1.png"
-                left="auto"
-                right={-15}
-                top={-160}
-                bottom="auto"
-                index={-1}
-            />
-
-            <Light
-                url="./lights/light2.png"
-                left={5}
-                right="auto"
-                top={-145}
-                bottom="auto"
-                index={-10}
-            />
-
-            <Light
-                url="./lights/light3.png"
-                left={-30}
-                right="auto"
-                top="auto"
-                bottom={-885}
-                index={-1}
-            /> */}
         </div>
     );
 }

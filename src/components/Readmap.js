@@ -24,14 +24,11 @@ const Timeline = ({ setObserver, callback }) => {
       setObserver(timeline3.current);
       setObserver(timeline4.current);
       setObserver(timeline5.current);
-      setObserver(timeline6.current);
       setObserver(square1.current);
       setObserver(square2.current);
       setObserver(square3.current);
       setObserver(square4.current);
       setObserver(square5.current);
-      setObserver(square6.current);
-      setObserver(square7.current);
     }, []);
   
     return (
@@ -65,11 +62,6 @@ const Timeline = ({ setObserver, callback }) => {
         <div className="squareWrapper">
           <div id="square6" ref={square6} className="square"></div>
         </div>
-        <div id="timeline6" ref={timeline6} className="timeline" />
-
-        <div className="squareWrapper">
-          <div id="square7" ref={square7} className="square"></div>
-        </div>
 
       </div>
     );
@@ -78,7 +70,7 @@ const Timeline = ({ setObserver, callback }) => {
 
 export const Readmap = () => {
     return (
-        <div className="container">
+        <div id="roadmap" className="container">
             <div className="row">   
                 <div className="col-lg-6">
                     <h2 className="text-white">Roadmap</h2>
@@ -165,22 +157,10 @@ export const Readmap = () => {
                     <p className="number mb-3">06</p>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h2>Ellis and Bohler's Drop</h2>
+                            <h2>Ellis and <br />Bohler's Drop</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
                             <p className="mt-3 mb-0">There are special NFT products with portraits of Ellis and Bohler. When our collection is sold out, we will send Ellis's portrait and 5ETH to the best collector of Hunters. Also, we will send Bohler's portrait and 5ETH to our most active and helpful community member.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="story">
-                    <p className="number mb-3">07</p>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <h2>Why do we <br />use it?</h2>
-                        </div>
-                        <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
                         </div>
                     </div>
                 </div>

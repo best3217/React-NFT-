@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Web3ReactProvider } from '@web3-react/core'
 import Web3 from 'web3'
 
@@ -23,6 +23,35 @@ function getLibrary(provider) {
 
 function App() {
 
+  const [image, setImage] = useState("./story/story1.jpg")
+
+  const images = [
+    "./story/story1.jpg",
+    "./story/story2.jpg",
+    "./story/story3.jpg",
+    "./story/story4.jpg",
+    "./story/story5.jpg",
+    "./story/story6.jpg",
+    "./story/story7.jpg",
+    "./story/story8.jpg",
+    "./story/story9.jpg",
+    "./story/story10.jpg",
+    "./story/story11.jpg",
+  ];
+
+  function changeImage () {
+    let random = Math.random();
+    let imageNum = parseInt(random*11);
+    setImage(images[imageNum]);
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      changeImage()
+    }, 1000);
+    return () => clearInterval(interval);
+  });
+
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <div className="App">
@@ -33,7 +62,7 @@ function App() {
 
         <Products />
 
-        <div className="about-section">
+        <div id="story" className="about-section">
           <div className="container">
             <div className="row">
               <div className="col-lg-6 position-relative">
@@ -49,7 +78,7 @@ function App() {
               </div>
               <div className="col-lg-6">
                   <div className="position-relative">
-                    <img src="./about.png" />
+                    <img src={image} className="w-100" />
                     <Light
                       url="./lights/light4.png"
                       left="auto"
