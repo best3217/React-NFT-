@@ -10,7 +10,13 @@ const Banner = () => {
                 <h1 className="title">Post-Apocalyptic</h1>
 
                 <div className="row">
-                    <div className="col-lg-6 offset-lg-3 offset-xxl-6">
+                    <div className="col-lg-3">
+                        <div className="ntf-info">
+                            <h4 className="text-white">Today date</h4>
+                            <p>0 NTFS Sold <span className="ms-3">10,000 NFTs available</span></p>
+                        </div>
+                    </div>
+                    <div className="col-lg-6 offset-lg-3">
                         <p  style={{ marginBottom: 95 }}>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
                         <div className="d-md-flex align-items-center justify-content-between text-center">
                             <button className="mb-5 mb-md-0">See on opnesea</button>
@@ -35,6 +41,8 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
+
+            <div className="divide"></div>
         </div>
     );
 }

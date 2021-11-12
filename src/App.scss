@@ -64,7 +64,7 @@ button {
     .title {
         color: #ffffff;
         text-align: center;
-        margin-bottom: 6.25rem !important;
+        margin-bottom: 12.25rem !important;
 
         @include media-breakpoint-down(lg) {
             margin-bottom: 2.25rem !important;
@@ -134,6 +134,17 @@ button {
         }
     }
 
+    .ntf-info {
+        h4 {
+            padding-bottom: 1rem;
+            border-bottom: 1px dotted #ffffff;
+        }
+
+        p {
+            padding: 1rem 0;
+        }
+    }
+
     @include media-breakpoint-down(lg) {
         padding: 5.875rem 0;
 
@@ -150,6 +161,30 @@ button {
         .title {
             font-size: 72px !important;
         }
+    }
+}
+
+.divide {
+    position: absolute;
+    top: 47%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 51%;
+        height: 1px;
+        background-color: rgba($color: #ffffff, $alpha: 0.7);
+    }
+
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 49%;
+        height: 3px;
+        background-color: #ffffff;
     }
 }
 
@@ -270,7 +305,7 @@ footer {
             a {
                 font-size: 16px;
                 font-weight: 500;
-                color: #ffffff;
+                color: #ffffff !important;
             }
         }
     }
@@ -294,8 +329,8 @@ footer {
     }
 
     p {
-    font-size: 16px;
-    color: #282B2F;
+        font-size: 16px;
+        color: #ffffff;
     }
 }
 
