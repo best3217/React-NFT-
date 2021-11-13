@@ -19,6 +19,7 @@ header {
         color: #ffffff;
         padding-left: 25px !important;
         padding-right: 25px !important;
+        cursor: pointer;
     }
 }
 
@@ -135,13 +136,18 @@ button {
     }
 
     .ntf-info {
-        h4 {
+        h2 {
             padding-bottom: 1rem;
             border-bottom: 1px dotted #ffffff;
+            
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 7rem !important;
+            }
         }
 
         p {
             padding: 1rem 0;
+            font-size: 30px;
         }
     }
 
@@ -253,10 +259,6 @@ button {
     position: relative;
     padding: 11.25rem 0;
 
-    .row {
-        --bs-gutter-x: 6.25rem;
-    }
-
     .team {
         margin-bottom: 1.875rem;
 
@@ -297,6 +299,12 @@ footer {
         }
     }
 
+    .navbar-brand {
+        @include media-breakpoint-up(lg) {
+            margin-left: 11rem;
+        }
+    }
+
     .footer-links {
         li {
             list-style: none;
@@ -306,6 +314,7 @@ footer {
                 font-size: 16px;
                 font-weight: 500;
                 color: #ffffff !important;
+                cursor: pointer;
             }
         }
     }

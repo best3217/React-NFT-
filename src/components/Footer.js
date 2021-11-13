@@ -56,7 +56,7 @@ const Footer = () => {
                                 </li>
                             </ul>
 
-                            <p className="mb-0">Copyrights</p>
+                            <p className="mb-0">Copyright 2021. The Post-Apocalyptic.</p>
 
                         </div>
                         

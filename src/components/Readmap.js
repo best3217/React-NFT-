@@ -29,6 +29,7 @@ const Timeline = ({ setObserver, callback }) => {
       setObserver(square3.current);
       setObserver(square4.current);
       setObserver(square5.current);
+      setObserver(square6.current);
     }, []);
   
     return (
@@ -73,9 +74,9 @@ export const Readmap = () => {
         <div id="roadmap" className="container">
             <div className="row">   
                 <div className="col-lg-6">
-                    <h2 className="text-white">Roadmap</h2>
+                    <h2 className="text-white mb-4">Roadmap</h2>
                 </div>
-                <div className="col-lg-5 offset-lg-1">
+                <div className="col-lg-7">
                     <p className="mt-3">We have a lot of ideas that make the customer the hero of our story. We love solving problems and exceeding your expectations. We will work hard with our community to make Discord and Twitter even cooler throughout time.</p>
                 </div>
             </div>
