@@ -1,8 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router,  Link } from "react-router-dom";
-import Light from "./Light";
+import { format } from 'date-fns';
 
 const Banner = () => {
+    let date = format(new Date(), 'yyyy-MM-dd');
+
     return(
         <div className="banner" style={{ backgroundImage: `url(./homebanner.png)` }}>
             <div className="container position-relative">
@@ -12,7 +14,7 @@ const Banner = () => {
                 <div className="row">
                     <div className="col-lg-5">
                         <div className="ntf-info">
-                            <h2 className="text-white">Today date</h2>
+                            <h2 className="text-white"> {date} </h2>
                             <p>0 NTFS Sold <span className="ms-3">10,000 NFTs available</span></p>
                         </div>
                     </div>

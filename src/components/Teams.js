@@ -16,28 +16,28 @@ const Teams = () => {
                     </div>
                     <div className="col-lg">
                         <div className="team">
-                            <img src="./team/team.jpg" />
+                            <img src="./story/story4.jpg" />
                             <h4 className="text-white"> Kabita L.</h4>
                             <p className="mb-0">Marketing Manager</p>
                         </div>
                     </div>
                     <div className="col-lg">
                         <div className="team">
-                            <img src="./team/team.jpg" />
+                            <img src="./story/story3.jpg" />
                             <h4 className="text-white">Svetlana G.</h4>
                             <p className="mb-0">Design Team Manager</p>
                         </div>
                     </div>
                     <div className="col-lg">
                         <div className="team">
-                            <img src="./team/team.jpg" />
+                            <img src="./story/story2.jpg" />
                             <h4 className="text-white"> Evgenia O.</h4>
                             <p className="mb-0">Artist</p>
                         </div>
                     </div>
                     <div className="col-lg">
                         <div className="team">
-                            <img src="./team/team.jpg" />
+                            <img src="./story/story1.jpg" />
                             <h4 className="text-white">Nikita K.</h4>
                             <p className="mb-0">Artist</p>
                         </div>
