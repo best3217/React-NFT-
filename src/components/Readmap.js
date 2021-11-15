@@ -24,12 +24,14 @@ const Timeline = ({ setObserver, callback }) => {
       setObserver(timeline3.current);
       setObserver(timeline4.current);
       setObserver(timeline5.current);
+      setObserver(timeline6.current);
       setObserver(square1.current);
       setObserver(square2.current);
       setObserver(square3.current);
       setObserver(square4.current);
       setObserver(square5.current);
       setObserver(square6.current);
+      setObserver(square7.current);
     }, []);
   
     return (
@@ -62,6 +64,11 @@ const Timeline = ({ setObserver, callback }) => {
 
         <div className="squareWrapper">
           <div id="square6" ref={square6} className="square"></div>
+        </div>
+        <div id="timeline6" ref={timeline6} className="timeline" />
+
+        <div className="squareWrapper">
+          <div id="square7" ref={square7} className="square"></div>
         </div>
 
       </div>
@@ -162,6 +169,18 @@ export const Readmap = () => {
                         </div>
                         <div className="col-lg-5 offset-lg-1">
                             <p className="mt-3 mb-0">There are special NFT products with portraits of Ellis and Bohler. When our collection is sold out, we will send Ellis's portrait and 5ETH to the best collector of Hunters. Also, we will send Bohler's portrait and 5ETH to our most active and helpful community member.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="story">
+                    <p className="number mb-3">07</p>
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <h2>Blockchain<br />Game</h2>
+                        </div>
+                        <div className="col-lg-5 offset-lg-1">
+                            <p className="mt-3 mb-0">We are planning to publish the blockchain game with  Only NFT owners can join to the game. It will be coming soon…! Enjoy it!</p>
                         </div>
                     </div>
                 </div>
