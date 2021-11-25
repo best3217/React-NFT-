@@ -149,10 +149,9 @@ function App() {
       :<LoadingScreen
         loading={true}
         bgColor='#1b1d54'
-        spinnerColor='#9ee5f8'
+        spinnerColor='#ff8b14'
         textColor='#ffffff'
         logoSrc='/logo.png'
-        text='Post Apocalyptic'
       > Post Apocalyptic</LoadingScreen>
       }
 
