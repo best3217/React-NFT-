@@ -26,7 +26,7 @@ const Header = () => {
             <p>
                 {" "}
                 🦊{" "}
-                <a target="_blank" href={`https://metamask.io/download.html`}>
+                <a target="_blank" rel="noreferrer" href={`https://metamask.io/download.html`}>
                 You must install Metamask, a virtual Ethereum wallet, in your
                 browser.
                 </a>
@@ -39,15 +39,19 @@ const Header = () => {
         const walletResponse = await connectWallet();
         setStatus(walletResponse.status);
         setWallet(walletResponse.address);
+        console.log(status);
     };  
     
-    useEffect(async () => {
-        const { address, status } = await getCurrentWalletConnected();
+    useEffect(() => {
+        async function getWallet() {
+            const { address, status } = await getCurrentWalletConnected();
     
-        setWallet(address);
-        setStatus(status);
-    
-        addWalletListener();
+            setWallet(address);
+            setStatus(status);
+        
+            addWalletListener();
+        }
+        getWallet();
       }, []);
 
     return(
@@ -57,7 +61,7 @@ const Header = () => {
                     <nav className="navbar navbar-expand-lg">
                         <div className="navbar-brand">
                             <Link to="/">
-                                <img src="./logo.png" />
+                                <img src="./logo.png" alt="logo" />
                             </Link>
                         </div>
 

@@ -1,6 +1,5 @@
 import React, {useRef, useEffect} from 'react';
-import TimelineObserver from "./timeline/index";
-
+import TimelineObserver from "react-timeline-animation";
 
 const Timeline = ({ setObserver, callback }) => {
   
@@ -32,7 +31,7 @@ const Timeline = ({ setObserver, callback }) => {
       setObserver(square5.current);
       setObserver(square6.current);
       setObserver(square7.current);
-    }, []);
+    });
   
     return (
       <div className="wrapper">

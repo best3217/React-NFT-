@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, {useEffect, useState} from "react";
 import LoadingScreen from 'react-loading-screen';
 
@@ -20,47 +21,10 @@ function App() {
 
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const [image, setImage] = useState("./story/story1.jpg")
-
-  const images = [
-    "./story/story1.jpg",
-    "./story/story2.jpg",
-    "./story/story3.jpg",
-    "./story/story4.jpg",
-    "./story/story5.jpg",
-    "./story/story6.jpg",
-    "./story/story7.jpg",
-    "./story/story8.jpg",
-    "./story/story9.jpg",
-    "./story/story10.jpg",
-    "./story/story11.jpg",
-  ];
-
-
-  let random;
-  let imageNum;
-  
-  function changeImage () {
-    random = Math.random();
-    imageNum = parseInt(random*11);
-
-    if(image===images[imageNum]) {
-      changeImage();
-    }else {
-      setImage(images[imageNum]);
-    }
-  }
-
   useEffect(() => {
-    const interval = setInterval(() => {
-      changeImage()
-    }, 500);
-    
     window.addEventListener('load', () => {
       setIsLoaded(true);
     })
-
-    return () => clearInterval(interval);
   });
 
   return (
@@ -90,8 +54,6 @@ function App() {
                 </div>
                 <div className="col-lg-6">
                     <div className="position-relative">
-
-                      {/* <img src={ image } className="w-100" /> */}
 
                       <Ticket />
 
@@ -148,7 +110,9 @@ function App() {
         spinnerColor='#ff8b14'
         textColor='#ffffff'
         logoSrc='/logo.png'
-      > Post Apocalyptic</LoadingScreen>
+      >
+        <div style={{ textAlign: 'center' }}>Post</div>
+      </LoadingScreen>
       }
 
     </div>

@@ -1,15 +1,19 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useState  } from 'react';
-import { BrowserRouter as Router,  Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { format } from 'date-fns';
+import { getMintedTotal } from './util/interact';
 
 const Banner = () => {
     let date = format(new Date(), 'yyyy-MM-dd');
     const [totalNFT, setTotal] = useState(0);
+    const [mintedNFT, setMintedNFT] = useState('');
 
     useEffect(() => {
         const url = "https://api.opensea.io/api/v1/collection/doodles-official/stats";
 
-        const fetchData = async () => {
+        async function fetchData(){
             try {
                     const response = await fetch(url);
                     const json = await response.json();
@@ -19,8 +23,15 @@ const Banner = () => {
                 }
         };
 
+        async function getNFTTotal() {
+            let minted =  await getMintedTotal();
+            setMintedNFT(minted);
+        }
+
+        getNFTTotal();
         fetchData();
-    }, []);
+
+    });
 
     return(
         <div className="banner" style={{ backgroundImage: `url(./homebanner.png)` }}>
@@ -32,7 +43,7 @@ const Banner = () => {
                     <div className="col-lg-5">
                         <div className="ntf-info">
                             <h2 className="text-white"> {date} </h2>
-                            <p>0 NTFS Sold <span className="ms-3">{totalNFT} NFTs available</span></p>
+                            <p>{ mintedNFT } NTFS Sold <span className="ms-3">{totalNFT} NFTs available</span></p>
                         </div>
                     </div>
                     <div className="col-lg-6 offset-xl-1">
@@ -43,14 +54,14 @@ const Banner = () => {
                                 <Router>
                                     <li>
                                         <a href="https://twitter.com/pst_apocalypse" className="social-item">
-                                            <img src="./twitter.svg" />
+                                            <img src="/twitter.svg" />
                                             Twitter
                                         </a>
                                     </li>
 
                                     <li>
                                         <a  href="https://discord.gg/z9y8BE2znv" className="social-item">
-                                            <img src="./discord.svg" />
+                                            <img src="/discord.svg" />
                                             Discord
                                         </a>
                                     </li>

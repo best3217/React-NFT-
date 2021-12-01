@@ -36,7 +36,7 @@ const Footer = () => {
 
                         <div className="navbar-brand mb-0">
                             <Link to="/">
-                                <img src="./logo.png" />
+                                <img src="/logo.png" alt="logo" />
                             </Link>
                         </div>
 
@@ -46,12 +46,12 @@ const Footer = () => {
                             <ul className="social d-flex gap-4 mb-4 justify-content-center justify-content-md-end p-0">
                                 <li>
                                     <a href="https://twitter.com/pst_apocalypse" rel="noreferrer" target="_blank">
-                                        <img src="./twitter.svg" />
+                                        <img src="./twitter.svg" alt="twitter" />
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://discord.gg/tdmnPxAKTJ" rel="noreferrer" target="_blank">
-                                        <img src="./discord.svg" />
+                                        <img src="./discord.svg" alt="discord" />
                                     </a>
                                 </li>
                             </ul>

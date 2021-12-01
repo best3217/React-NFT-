@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import Slider from "react-slick";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -80,7 +81,7 @@ const Products = () => {
 
                     {products.map((src, index) => (
                         <div key={index} className="product">
-                            <img src={ src } className="w-100" />
+                            <img src={ src } alt="products" className="w-100" />
                         </div>
                     ))}
 
